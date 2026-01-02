@@ -11,8 +11,8 @@ Principais tecnologias e versões utilizadas no projeto:
 * **Laravel:** 8.83.29
 * **PHP:** 7.4.33
 * **Composer:** 2.9.1
-* **Bootstrap:** x.x
-* **Font Awesome:** x.x
+* **Bootstrap:** 5.3.0
+* **Font Awesome:** 6.0.0
 
 ---
 
