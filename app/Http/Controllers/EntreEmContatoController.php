@@ -15,13 +15,11 @@ class EntreEmContatoController extends Controller
     {
         $dados = $request->validate([
             'nome' => 'required|string',
-            'email' => 'required|string',
             'mensagem' => 'required|string'
         ]); 
 
-        $texto = "\nOlá, Me chamo: {$dados['nome']}\n" 
-                    . "\nMeu e-mail é: {$dados['email']}\n" 
-                    . "\nMensagem: {$dados['mensagem']}\n";
+        $texto = "\nOlá, meu nome é {$dados['nome']}\n" 
+                . "\n{$dados['mensagem']}\n";
         
         
         $url = "https://api.whatsapp.com/send?phone=5519988406588&text=" . urlencode($texto);

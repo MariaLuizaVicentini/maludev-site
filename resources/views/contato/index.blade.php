@@ -12,9 +12,6 @@
                             <input name="nome" type="text" class="form-control" placeholder="Seu Nome" required>
                         </div>
                         <div class="mb-3">
-                            <input name="email" type="email" class="form-control" placeholder="Seu E-mail" required>
-                        </div>
-                        <div class="mb-3">
                             <textarea name="mensagem" class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Enviar</button>
