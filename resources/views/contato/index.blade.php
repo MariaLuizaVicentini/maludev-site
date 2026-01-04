@@ -32,10 +32,10 @@
                 <div class="col-md-4">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="/" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Início</a></li>
-                        <li><a href="/projetos" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Projetos</a></li>
-                        <li><a href="/habilidades" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Habilidades</a></li>
-                        <li><a href="/sobre" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sobre</a></li>
+                        <li><a href="#inicio" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Início</a></li>
+                        <li><a href="#projetos" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Projetos</a></li>
+                        <li><a href="#habilidades" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Habilidades</a></li>
+                        <li><a href="#sobre" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sobre</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
