@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EntreEmContatoController;
+use App\Http\Controllers\GroqController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,8 @@ Route::get('/', function () {
 
 Route::post('/contato/enviar', [EntreEmContatoController::class, 'enviar'])
 ->name('enviar-mensagem');
+
+Route::group(['prefix' => 'groq', 'as' => 'groq.'], function () {
+    Route::post('/chat-malu', [GroqController::class, 'chat'])
+        ->name('chat');
+});
