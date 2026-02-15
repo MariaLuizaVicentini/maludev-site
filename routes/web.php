@@ -21,6 +21,9 @@ Route::get('/', function () {
     return view('home');
 })->name('pagina-inicial');
 
+Route::get('/php-info', function () {
+    return view('phpinfo');
+});
 
 Route::post('/contato/enviar', [EntreEmContatoController::class, 'enviar'])
 ->name('enviar-mensagem');

@@ -90,8 +90,6 @@ class GroqService
         ]);
 
         $data = json_decode($response->getBody(), true);
-        // var_dump($data);
-        // exit;
         
         $respostaIA = $data['choices'][0]['message']['content'] ?? "Desculpe, tive um problema técnico.";
 
