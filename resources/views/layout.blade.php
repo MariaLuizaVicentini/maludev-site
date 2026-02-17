@@ -45,7 +45,7 @@
         <i class="fas fa-comment-dots fa-lg text-white"></i>
     </div>
 
-    <div id="chat-box" class="card shadow d-none" style="position: fixed; bottom: 90px; right: 20px; width: 350px; max-height: 500px; z-index: 1000; border-radius: 15px; overflow: hidden;">
+    <div id="chat-box" class="card shadow d-none">
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
             <span>Assistente IA</span>
             <button type="button" class="btn-close btn-close-white" id="chat-close"></button>

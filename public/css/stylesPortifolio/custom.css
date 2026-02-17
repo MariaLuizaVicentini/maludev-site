@@ -5,24 +5,26 @@
 
 /* ─── CSS Variables ──────────────────────────── */
 :root {
-  --green:       #00e676;
-  --green-dim:   rgba(0, 230, 118, 0.12);
-  --green-glow:  rgba(0, 230, 118, 0.3);
-  --bg-main:     #0a0a0a;
-  --bg-section:  #0d0d0d;
-  --bg-card:     #111111;
+  --green: #00e676;
+  --green-dim: rgba(0, 230, 118, 0.12);
+  --green-glow: rgba(0, 230, 118, 0.3);
+  --bg-main: #0a0a0a;
+  --bg-section: #0d0d0d;
+  --bg-card: #111111;
   --bg-card-alt: #141414;
-  --text-primary:   #f0f0f0;
+  --text-primary: #f0f0f0;
   --text-secondary: #888;
-  --text-muted:     #555;
-  --border:      rgba(255, 255, 255, 0.06);
+  --text-muted: #555;
+  --border: rgba(255, 255, 255, 0.06);
   --font-display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono:    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --transition:   0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --font-mono: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ─── Reset & Base ───────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -46,13 +48,16 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-main);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--green);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #00ff88;
 }
@@ -180,8 +185,15 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Hero CTA button */
@@ -220,12 +232,12 @@ body {
 }
 
 /* Profile circle */
-#inicio .col-lg-5 > div {
+#inicio .col-lg-5>div {
   animation: fadeScale 1s 0.4s ease both;
   position: relative;
 }
 
-#inicio .col-lg-5 > div::before {
+#inicio .col-lg-5>div::before {
   content: '';
   position: absolute;
   inset: -12px;
@@ -234,7 +246,7 @@ body {
   animation: spinSlow 20s linear infinite;
 }
 
-#inicio .col-lg-5 > div::after {
+#inicio .col-lg-5>div::after {
   content: '';
   position: absolute;
   inset: -25px;
@@ -244,7 +256,9 @@ body {
 }
 
 @keyframes spinSlow {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ─── Section Shared ─────────────────────────── */
@@ -315,13 +329,13 @@ h2.fw-bold.text-white {
 }
 
 /* Card icon badge */
-#projetos .card-body > div:first-child {
+#projetos .card-body>div:first-child {
   background-color: var(--green-dim) !important;
   border-radius: 4px !important;
   transition: background-color var(--transition), transform var(--transition);
 }
 
-#projetos .card:hover .card-body > div:first-child {
+#projetos .card:hover .card-body>div:first-child {
   background-color: rgba(0, 230, 118, 0.2) !important;
   transform: scale(1.08) rotate(-3deg);
 }
@@ -454,7 +468,7 @@ h2.fw-bold.text-white {
   line-height: 1.85;
 }
 
-#sobre p + p {
+#sobre p+p {
   margin-top: 1.2rem;
 }
 
@@ -595,16 +609,16 @@ footer p.text-secondary.mb-0 {
 #chat-circle {
   background-color: #111 !important;
   border: 1px solid rgba(0, 230, 118, 0.3) !important;
-  box-shadow: 0 0 20px rgba(0, 230, 118, 0.15), 0 4px 15px rgba(0,0,0,0.5) !important;
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.15), 0 4px 15px rgba(0, 0, 0, 0.5) !important;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-  width: 56px !important;
-  height: 56px !important;
+  width: 50px !important;
+  height: 50px !important;
 }
 
 #chat-circle:hover {
   transform: scale(1.1);
   border-color: var(--green) !important;
-  box-shadow: 0 0 30px var(--green-glow), 0 6px 20px rgba(0,0,0,0.6) !important;
+  box-shadow: 0 0 30px var(--green-glow), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
 }
 
 #chat-circle i {
@@ -612,11 +626,22 @@ footer p.text-secondary.mb-0 {
 }
 
 #chat-box {
-  border: 1px solid var(--border) !important;
-  border-radius: 6px !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8) !important;
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  width: 320px;
+  height: 65vh;
+  max-height: 500px;
+  min-height: 350px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
   animation: fadeScale 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 #chat-box .card-header {
   font-family: var(--font-mono);
@@ -704,6 +729,7 @@ footer p.text-secondary.mb-0 {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -715,6 +741,7 @@ footer p.text-secondary.mb-0 {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -739,7 +766,7 @@ footer p.text-secondary.mb-0 {
     display: none;
   }
 
-  #inicio .col-lg-5 > div {
+  #inicio .col-lg-5>div {
     width: 220px !important;
     height: 220px !important;
   }
@@ -752,13 +779,52 @@ footer p.text-secondary.mb-0 {
   }
 }
 
-@media (max-width: 575.98px) {
+
+/* ─── Utility ────────────────────────────────── */
+.text-green {
+  color: var(--green) !important;
+}
+
+.bg-green {
+  background-color: var(--green) !important;
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
   #chat-box {
-    width: 95vw !important;
-    right: 2.5vw !important;
+    width: 260px;
+    height: 360px;
+    bottom: 70px;
+    right: 10px;
   }
 }
 
-/* ─── Utility ────────────────────────────────── */
-.text-green { color: var(--green) !important; }
-.bg-green   { background-color: var(--green) !important; }
+
+/* CELULAR */
+
+@media (max-width: 480px) {
+  #chat-box {
+    width: 90%;
+    height: 60vh;
+    right: 5%;
+    bottom: 70px;
+  }
+}
+
+
+/* AREA MENSAGENS */
+#chat-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+@media (min-width: 1200px) {
+  #chat-box {
+    width: 300px;
+    height: 60vh;
+  }
+}
+
