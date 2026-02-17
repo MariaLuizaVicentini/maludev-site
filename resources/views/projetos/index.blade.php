@@ -1,77 +1,113 @@
 @extends('layout')
 
 @section('meus-projetos')
-<section id="projetos" class="py-5">  
-    <div class="container">  
-        <h2 class="text-center mb-5">Esses são meus pojetos</h2>  
-        <div class="row g-4">  
+    <section id="projetos" class="py-5" style="background-color: #0d0d0d;">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold text-white mb-1">Meus Projetos</h2>
+            <div class="mx-auto mb-5" style="width: 60px; height: 3px; background-color: #00e676;"></div>
+            <div class="row g-4">
 
-            <div class="col-md-6 col-lg-4">  
-                <div class="card h-100">  
-                    <img src="{{ asset('img\projetos.jpg') }}" class="card-img-top" alt="Projeto 1">  
-                    <div class="card-body">  
-                        <h5 class="card-title">CONTROLE DE SÉRIES</h5>  
-                        <p class="card-text">Sistema de Gerenciamento de Séries Aplicação Full-Stack desenvolvida em PHP com Laravel e Bootstrap. A plataforma conta com sistema de autenticação, gestão de catálogo e controle de progresso de episódios assistidos.</p>  
-                        <a href="https://github.com/MariaLuizaVicentini/controle-series" class="btn btn-primary">Ver Detalhes</a>  
-                    </div>  
-                </div>  
-            </div>  
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0" style="background-color: #141414; border-radius: 8px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3"
+                                style="width: 40px; height: 40px; background-color: rgba(0,230,118,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-tv" style="color: #00e676; font-size: 1.2rem;"></i>
+                            </div>
+                            <h5 class="card-title text-white fw-bold">Controle de Séries</h5>
+                            <p style="color: #777; font-size: 0.9rem;">Sistema Full-Stack em PHP com Laravel e Bootstrap.
+                                Autenticação, gestão de catálogo e controle de episódios assistidos.</p>
+                            <a href="#" class="text-decoration-none fw-semibold"
+                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="col-md-6 col-lg-4">  
-                <div class="card h-100">  
-                    <img src="{{ asset('img\projetos.jpg') }}" class="card-img-top" alt="Projeto 1">  
-                    <div class="card-body">  
-                        <h5 class="card-title">BUSCA VAGAS LINKEDIN</h5>  
-                        <p class="card-text">API de Scraping - Integração para busca automatizada de vagas com filtros avançados de relevância e segmentação por período (24h e 7 dias)</p>  
-                        <a href="https://github.com/MariaLuizaVicentini/BuscaVagasLinkedin?tab=readme-ov-file" class="btn btn-primary">Ver Detalhes</a>  
-                    </div>  
-                </div>  
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0" style="background-color: #141414; border-radius: 8px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3"
+                                style="width: 40px; height: 40px; background-color: rgba(0,230,118,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-search" style="color: #00e676; font-size: 1.2rem;"></i>
+                            </div>
+                            <h5 class="card-title text-white fw-bold">Busca Vagas LinkedIn</h5>
+                            <p style="color: #777; font-size: 0.9rem;">API de Scraping para busca automatizada de vagas com
+                                filtros avançados de relevância e segmentação por período.</p>
+                            <a href="#" class="text-decoration-none fw-semibold"
+                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0" style="background-color: #141414; border-radius: 8px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3"
+                                style="width: 40px; height: 40px; background-color: rgba(0,230,118,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-briefcase" style="color: #00e676; font-size: 1.2rem;"></i>
+                            </div>
+                            <h5 class="card-title text-white fw-bold">Portfólio Dev</h5>
+                            <p style="color: #777; font-size: 0.9rem;">Desenvolvido em Laravel com Bootstrap e PHP.</p>
+                            <a href="#" class="text-decoration-none fw-semibold"
+                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0" style="background-color: #141414; border-radius: 8px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3"
+                                style="width: 40px; height: 40px; background-color: rgba(0,230,118,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-currency-dollar" style="color: #00e676; font-size: 1.2rem;"></i>
+                            </div>
+                            <h5 class="card-title text-white fw-bold">Cotação Banco Central</h5>
+                            <p style="color: #777; font-size: 0.9rem;">Aplicação em PHP que consome a API do Banco Central
+                                para cotação do dólar e conversão de valores em tempo real.</p>
+                            <a href="#" class="text-decoration-none fw-semibold"
+                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0" style="background-color: #141414; border-radius: 8px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3"
+                                style="width: 40px; height: 40px; background-color: rgba(0,230,118,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-scissors" style="color: #00e676; font-size: 1.2rem;"></i>
+                            </div>
+                            <h5 class="card-title text-white fw-bold">Barbearia Alura</h5>
+                            <p style="color: #777; font-size: 0.9rem;">Projeto responsivo adaptado para diferentes tamanhos
+                                de tela, com experiência agradável em desktop e mobile.</p>
+                            <a href="#" class="text-decoration-none fw-semibold"
+                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0" style="background-color: #141414; border-radius: 8px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3"
+                                style="width: 40px; height: 40px; background-color: rgba(0,230,118,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-robot" style="color: #00e676; font-size: 1.2rem;"></i>
+                            </div>
+                            <h5 class="card-title text-white fw-bold">Automação Web Login</h5>
+                            <p style="color: #777; font-size: 0.9rem;">Script em Python para automação web utilizando
+                                Selenium.</p>
+                            <a href="#" class="text-decoration-none fw-semibold"
+                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-md-6 col-lg-4">  
-                <div class="card h-100">  
-                    <img src="{{ asset('img\projetos.jpg') }}" class="card-img-top" alt="Projeto 1">  
-                    <div class="card-body">  
-                        <h5 class="card-title">PORTIFOLIO DEV</h5>  
-                        <p class="card-text">Desenvolvido em laravel com Bootstrap e PHP. </p>  
-                        <a href="https://github.com/MariaLuizaVicentini/MeuPortifolioDev" class="btn btn-primary">Ver Detalhes</a>  
-                    </div>  
-                </div>  
-            </div>  
-
-            <div class="col-md-6 col-lg-4">  
-                <div class="card h-100">  
-                    <img src="{{ asset('img\projetos.jpg') }}" class="card-img-top" alt="Projeto 1">  
-                    <div class="card-body">  
-                        <h5 class="card-title">COTAÇÃO BANCO CENTRAL</h5>  
-                        <p class="card-text">Aplicação em PHP que consome dados da API do Banco Central para obter a cotação atual do dólar e converter valores digitados em tempo real.</p>  
-                        <a href="https://github.com/MariaLuizaVicentini/CotacaoBancoCentral" class="btn btn-primary">Ver Detalhes</a>  
-                    </div>  
-                </div>  
-            </div> 
-
-            <div class="col-md-6 col-lg-4">  
-                <div class="card h-100">  
-                    <img src="{{ asset('img\projetos.jpg') }}" class="card-img-top" alt="Projeto 2">  
-                    <div class="card-body">  
-                        <h5 class="card-title">BARBEARIA ALURA</h5>  
-                        <p class="card-text">O projeto foi desenvolvido para se adaptar a diferentes tamanhos de tela, garantindo uma experiência agradável tanto em computadores quanto em dispositivos móveis.</p>  
-                        <a href="https://github.com/MariaLuizaVicentini/barbeariaAlura" class="btn btn-primary">Ver Detalhes</a>  
-                    </div>  
-                </div>  
-            </div>  
-
-            <div class="col-md-6 col-lg-4">  
-                <div class="card h-100">  
-                    <img src="{{ asset('img\projetos.jpg') }}" class="card-img-top" alt="Projeto 3">  
-                    <div class="card-body">  
-                        <h5 class="card-title">AUTOMAÇÃO WEB LOGIN</h5>  
-                        <p class="card-text">Este projeto demonstra a implementação de um script básico em Python para automação web utilizando a biblioteca Selenium. </p>  
-                        <a href="https://github.com/MariaLuizaVicentini/AutomacaoWeb-Python" class="btn btn-primary">Ver Detalhes</a>  
-                    </div>  
-                </div>  
-            </div>
-        </div>  
-    </div>  
-</section>  
+        </div>
+    </section>
 @endsection
