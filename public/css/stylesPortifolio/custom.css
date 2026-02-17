@@ -1,29 +1,764 @@
+/* =============================================
+   MALU VICENTINI — PORTFOLIO CSS
+   Dark Tech Aesthetic | Neon Green Accents
+   ============================================= */
+
+/* ─── CSS Variables ──────────────────────────── */
 :root {
-    --bs-primary: #9D00FF; /* Cor personalizada */
+  --green:       #00e676;
+  --green-dim:   rgba(0, 230, 118, 0.12);
+  --green-glow:  rgba(0, 230, 118, 0.3);
+  --bg-main:     #0a0a0a;
+  --bg-section:  #0d0d0d;
+  --bg-card:     #111111;
+  --bg-card-alt: #141414;
+  --text-primary:   #f0f0f0;
+  --text-secondary: #888;
+  --text-muted:     #555;
+  --border:      rgba(255, 255, 255, 0.06);
+  --font-display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --transition:   0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* ─── Reset & Base ───────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.7;
+  cursor: default;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+}
+
+/* ─── Selection ──────────────────────────────── */
+::selection {
+  background: var(--green);
+  color: #0a0a0a;
+}
+
+/* ─── Navbar ─────────────────────────────────── */
 .navbar {
-    transition: all 0.3s ease-in-out; /* Efeito suave */
+  background-color: rgba(10, 10, 10, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  transition: background var(--transition), box-shadow var(--transition);
 }
 
-.btn-primary {
-    border-radius: 30px;
-    padding: 12px 30px;
+.navbar.scrolled {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-.card {
-    transition: transform 0.3s;
+.navbar-brand {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--green) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity var(--transition);
 }
 
-.card:hover {
-    transform: translateY(-10px); /* Efeito de levitação */
+.navbar-brand:hover {
+  opacity: 0.75;
 }
 
+
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary) !important;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  transition: color var(--transition);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 1.5px;
+  background: var(--green);
+  transition: transform var(--transition);
+  transform-origin: center;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--green) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ─── Hero Section ───────────────────────────── */
+#inicio {
+  position: relative;
+  background-color: var(--bg-main);
+  overflow: hidden;
+}
+
+/* Subtle grid background */
+#inicio::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Radial glow behind image */
+#inicio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 230, 118, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+#inicio h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  animation: fadeSlideUp 0.8s ease both;
+}
+
+#inicio h1 span {
+  color: var(--green);
+  text-shadow: 0 0 30px var(--green-glow);
+}
+
+#inicio .lead {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  animation: fadeSlideUp 0.8s 0.15s ease both;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Hero CTA button */
+#inicio .btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  background-color: var(--green);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  animation: fadeSlideUp 0.8s 0.3s ease both;
+}
+
+#inicio .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#inicio .btn:hover::before {
+  transform: translateX(0);
+}
+
+#inicio .btn:hover {
+  box-shadow: 0 0 25px var(--green-glow), 0 0 60px rgba(0, 230, 118, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Profile circle */
+#inicio .col-lg-5 > div {
+  animation: fadeScale 1s 0.4s ease both;
+  position: relative;
+}
+
+#inicio .col-lg-5 > div::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 230, 118, 0.2);
+  animation: spinSlow 20s linear infinite;
+}
+
+#inicio .col-lg-5 > div::after {
+  content: '';
+  position: absolute;
+  inset: -25px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 230, 118, 0.08);
+  animation: spinSlow 35s linear infinite reverse;
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Section Shared ─────────────────────────── */
+.section-dark {
+  background-color: var(--bg-section);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.divider-green {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), transparent);
+  margin-bottom: 3rem;
+}
+
+/* Shared section heading style (inline) */
+h2.fw-bold.text-white {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: -0.02em;
+}
+
+/* ─── Projects Section ───────────────────────── */
+#projetos {
+  background-color: var(--bg-section);
+  position: relative;
+}
+
+/* Card */
+#projetos .card {
+  background-color: var(--bg-card-alt) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+#projetos .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--green), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+#projetos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 230, 118, 0.15);
+  border-color: rgba(0, 230, 118, 0.2) !important;
+}
+
+#projetos .card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Card icon badge */
+#projetos .card-body > div:first-child {
+  background-color: var(--green-dim) !important;
+  border-radius: 4px !important;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+#projetos .card:hover .card-body > div:first-child {
+  background-color: rgba(0, 230, 118, 0.2) !important;
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.card-body p {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--text-secondary) !important;
+}
+
+/* Card link */
+#projetos a.text-decoration-none {
+  font-family: var(--font-mono);
+  font-size: 0.78rem !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition), opacity var(--transition);
+}
+
+#projetos a.text-decoration-none:hover {
+  gap: 10px;
+  opacity: 0.85;
+}
+
+/* ─── Skills Section ─────────────────────────── */
+#habilidades {
+  background-color: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card {
+  background-color: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(0, 230, 118, 0.25);
+  background-color: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 230, 118, 0.05);
+}
+
+.skill-card:hover::after {
+  transform: scaleX(1);
+}
+
+.skill-icon {
+  font-size: 2.2rem;
+  display: block;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(-5deg);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.skill-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  margin-top: 0.5rem !important;
+}
+
+.skill-card:hover .skill-title {
+  color: var(--green);
+}
+
+/* Override Bootstrap color for purple */
+.text-purple {
+  color: #7c4dff !important;
+}
+
+/* ─── About Section ──────────────────────────── */
+#sobre {
+  background-color: var(--bg-main);
+  position: relative;
+}
+
+#sobre::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, var(--green), transparent);
+}
+
+#sobre p {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-secondary) !important;
+  line-height: 1.85;
+}
+
+#sobre p + p {
+  margin-top: 1.2rem;
+}
+
+/* ─── Contact Section ────────────────────────── */
+#contato {
+  background-color: var(--bg-section);
+}
+
+#contato h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Form inputs */
+#contato .form-control {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background-color: #111 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+  padding: 1rem 1.2rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+#contato .form-control::placeholder {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+#contato .form-control:focus {
+  background-color: #131313 !important;
+  border-color: rgba(0, 230, 118, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.08), 0 0 15px rgba(0, 230, 118, 0.05) !important;
+  outline: none;
+}
+
+/* Submit button */
+#contato .btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background-color: var(--green) !important;
+  color: #0a0a0a !important;
+  border-radius: 2px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+#contato .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#contato .btn:hover::before {
+  transform: translateX(0);
+}
+
+#contato .btn:hover {
+  box-shadow: 0 0 25px var(--green-glow);
+  transform: translateY(-1px);
+}
+
+/* ─── Footer ─────────────────────────────────── */
 footer {
-    border-top: 2px solid var(--bs-primary);
+  background-color: var(--bg-main) !important;
+  border-top: 1px solid var(--border);
 }
 
-footer a:hover {
-    color: var(--bs-primary) !important;
-    transition: 0.3s;
+footer h5 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
+
+footer p.text-secondary,
+footer .text-secondary {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted) !important;
+  line-height: 1.6;
+}
+
+/* Footer links */
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition), padding-left var(--transition);
+  display: inline-block;
+}
+
+footer ul li a:hover {
+  color: var(--green);
+  padding-left: 4px;
+}
+
+/* Footer social icons */
+footer .fab {
+  color: var(--text-secondary);
+  transition: color var(--transition), transform var(--transition), filter var(--transition);
+}
+
+footer a:hover .fab {
+  color: var(--green);
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 6px var(--green));
+}
+
+footer hr {
+  border-color: var(--border);
+  margin: 1rem 0;
+}
+
+footer p.text-secondary.mb-0 {
+  font-size: 0.78rem;
+}
+
+/* ─── Chat Widget ────────────────────────────── */
+#chat-circle {
+  background-color: #111 !important;
+  border: 1px solid rgba(0, 230, 118, 0.3) !important;
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.15), 0 4px 15px rgba(0,0,0,0.5) !important;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  width: 56px !important;
+  height: 56px !important;
+}
+
+#chat-circle:hover {
+  transform: scale(1.1);
+  border-color: var(--green) !important;
+  box-shadow: 0 0 30px var(--green-glow), 0 6px 20px rgba(0,0,0,0.6) !important;
+}
+
+#chat-circle i {
+  color: var(--green) !important;
+}
+
+#chat-box {
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8) !important;
+  animation: fadeScale 0.2s ease;
+}
+
+#chat-box .card-header {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: #111 !important;
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 1.2rem;
+}
+
+#chat-box .card-header span {
+  font-family: var(--font-display);
+}
+
+#chat-box #chat-content {
+  background-color: #0d0d0d !important;
+}
+
+#chat-box #chat-content div {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  border-radius: 3px !important;
+}
+
+/* User message */
+#chat-content .bg-dark {
+  background-color: var(--green) !important;
+  color: #0a0a0a !important;
+  border-color: transparent !important;
+}
+
+/* AI message */
+#chat-content .bg-white {
+  background-color: #161616 !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+#chat-box .card-footer {
+  background-color: #111 !important;
+  border-top: 1px solid var(--border) !important;
+  padding: 0.75rem 1rem;
+}
+
+#chat-input {
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem !important;
+  background-color: #0d0d0d !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 2px 0 0 2px !important;
+  padding: 0.6rem 0.9rem;
+  transition: border-color var(--transition);
+}
+
+#chat-input:focus {
+  border-color: rgba(0, 230, 118, 0.4) !important;
+  box-shadow: none !important;
+  outline: none;
+}
+
+#chat-input::placeholder {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+#chat-send {
+  background-color: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #0a0a0a !important;
+  border-radius: 0 2px 2px 0 !important;
+  padding: 0.6rem 1rem;
+  transition: box-shadow var(--transition);
+}
+
+#chat-send:hover {
+  box-shadow: 0 0 12px var(--green-glow);
+}
+
+/* ─── Animations ─────────────────────────────── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scroll reveal — add .reveal class via JS if desired */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Responsive Tweaks ──────────────────────── */
+@media (max-width: 991.98px) {
+  #inicio::after {
+    display: none;
+  }
+
+  #inicio .col-lg-5 > div {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(10, 10, 10, 0.97);
+    border-top: 1px solid var(--border);
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #chat-box {
+    width: 95vw !important;
+    right: 2.5vw !important;
+  }
+}
+
+/* ─── Utility ────────────────────────────────── */
+.text-green { color: var(--green) !important; }
+.bg-green   { background-color: var(--green) !important; }
