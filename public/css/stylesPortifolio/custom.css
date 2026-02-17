@@ -1,29 +1,218 @@
+/* =========================================
+   TEMA GLOBAL
+========================================= */
+
 :root {
-    --bs-primary: #9D00FF; /* Cor personalizada */
+
+    --cor-primaria: #00e676;
+    --cor-primaria-hover: #00c853;
+
+    --bs-primary: #00e676;
+    --bs-success: #00e676;
+    --bs-info: #00e676;
+
+    --bs-primary-rgb: 0, 230, 118;
+    --bs-success-rgb: 0, 230, 118;
+    --bs-info-rgb: 0, 230, 118;
+
 }
+
+
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar {
-    transition: all 0.3s ease-in-out; /* Efeito suave */
+    transition: all 0.3s ease-in-out;
 }
 
-.btn-primary {
-    border-radius: 30px;
-    padding: 12px 30px;
+.navbar a {
+    color: white;
+    transition: 0.3s;
 }
 
-.card {
-    transition: transform 0.3s;
+.navbar a:hover {
+    color: var(--cor-primaria);
 }
 
-.card:hover {
-    transform: translateY(-10px); /* Efeito de levitação */
+
+.form-control:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
+    background-color: #141414;
+    color: white;
 }
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-    border-top: 2px solid var(--bs-primary);
+    border-top: 2px solid var(--cor-primaria);
+    transition: 0.3s;
+}
+
+footer a {
+    color: var(--cor-primaria);
 }
 
 footer a:hover {
-    color: var(--bs-primary) !important;
+    color: var(--cor-primaria-hover);
+}
+
+/* =========================================
+   ÍCONES
+========================================= */
+
+footer i {
     transition: 0.3s;
 }
+
+footer i:hover {
+    color: var(--cor-primaria);
+    transform: scale(1.2);
+}
+
+/* =========================================
+   EFEITO GLOW ESPECIAL
+========================================= */
+
+.glow:hover {
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.7);
+}
+
+/* =========================================
+   SCROLLBAR PERSONALIZADA
+========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 10px;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-primaria-hover);
+}
+
+/* =========================
+SECTION PADRÃO
+========================= */
+
+.section-dark {
+
+    background-color: #0a0a0a;
+
+}
+
+
+/* =========================
+TÍTULO
+========================= */
+
+.section-title {
+
+    color: white;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+DIVIDER
+========================= */
+
+.divider-green {
+
+    width: 60px;
+    height: 3px;
+
+    background-color: var(--cor-primaria);
+
+}
+
+
+/* =========================
+CARD
+========================= */
+
+.skill-card {
+
+    background: #141414;
+
+    border: 1px solid #1f1f1f;
+
+    border-radius: 10px;
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+}
+
+
+/* =========================
+HOVER
+========================= */
+
+.skill-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--cor-primaria);
+
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+
+}
+
+
+/* =========================
+ICONE
+========================= */
+
+.skill-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+    color: var(--cor-primaria);
+
+    transition: 0.3s;
+
+}
+
+
+.skill-card:hover .skill-icon {
+
+    transform: scale(1.2);
+
+    text-shadow: 0 0 20px rgba(0, 230, 118, 0.7);
+
+}
+
+
+/* =========================
+TEXTO
+========================= */
+
+.skill-title {
+
+    color: white;
+
+    font-weight: 600;
+
+}
+

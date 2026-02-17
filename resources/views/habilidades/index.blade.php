@@ -1,73 +1,39 @@
 @extends('layout')
-
 @section('minhas-habilidades')
-    <section id="habilidades" class="bg-light py-5">  
-        <div class="container">  
-            <h2 class="text-center mb-5">Habilidades Técnicas</h2>  
-            <div class="row">  
+<section id="habilidades" class="section-dark py-5">
+    <div class="container py-5">
+        <h2 class="text-center section-title">
+            Habilidades Técnicas
+        </h2>
+        <div class="divider-green mx-auto mb-5"></div>
+        <div class="row g-4 justify-content-center">
+            @php
+            $skills = [
 
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-html5 fa-3x text-danger mb-3"></i>  
-                        <h3>HTML5</h3> 
-                    </div>  
-                </div>  
+                ['icon' => 'fa-html5', 'name' => 'HTML5', 'color' => 'text-danger'],
+                ['icon' => 'fa-css3-alt', 'name' => 'CSS3', 'color' => 'text-primary'],
+                ['icon' => 'fa-js', 'name' => 'JavaScript', 'color' => 'text-warning'],
+                ['icon' => 'fa-bootstrap', 'name' => 'Bootstrap', 'color' => ''],
+                ['icon' => 'fa-php', 'name' => 'PHP', 'color' => ''],
+                ['icon' => 'fa-database', 'name' => 'SQLite', 'color' => ''],
+                ['icon' => 'fa-laravel', 'name' => 'Laravel', 'color' => 'text-danger'],
+                ['icon' => 'fa-git-alt', 'name' => 'Git', 'color' => ''],
+                ['icon' => 'fa-python', 'name' => 'Python', 'color' => 'text-primary'],
 
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-css3 fa-3x text-primary mb-3"></i>  
-                        <h3>CSS 3</h3> 
-                    </div>  
-                </div> 
+            ];
+            @endphp
 
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-js fa-3x text-warning mb-3"></i>  
-                        <h3>JavaScript</h3>  
-                    </div>
-                </div>  
-
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-bootstrap fa-3x text-dark mb-3"></i>  
-                        <h3>Bootstrap</h3>  
-                    </div>
+            @foreach($skills as $skill)
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="skill-card">
+                    <i class="fab {{ $skill['icon'] }} skill-icon {{ $skill['color'] }}"></i>
+                    <h6 class="skill-title">
+                        {{ $skill['name'] }}
+                    </h6>
                 </div>
-
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-php fa-3x text-secondary mb-3"></i>
-                        <h3>PHP</h3>
-                    </div>    
-                </div>
-
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fas fa-database fa-3x text-info mb-3"></i>
-                        <h3>SQLite</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-laravel fa-3x text-danger mb-3"></i>  
-                        <h3>Laravel</h3>  
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-git-alt fa-3x mb-3" style="color: #F05032;"></i>  
-                        <h3>Git</h3>  
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">  
-                    <div class="text-center">  
-                        <i class="fab fa-python fa-3x text-primary mb-3"></i>  
-                        <h3>Python</h3>  
-                    </div>
-                </div>
-            </div>  
-    </section>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 @endsection
