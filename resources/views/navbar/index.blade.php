@@ -13,8 +13,13 @@
                     <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ asset('curriculo/CVdev02.26.pdf') }}" target="_blank"
-                            download="Malu_Vicentini_CV.pdf">Baixar CV</a>
+                        <a 
+                            class="nav-link"
+                            href="{{ asset('curriculo/CVdev02.26.pdf') }}" 
+                            onclick="window.open(this.href, '_blank'); return false;"
+                            download="Malu_Vicentini_CV.pdf">
+                            Baixar CV
+                        </a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>

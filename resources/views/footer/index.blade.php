@@ -49,7 +49,12 @@
                     </li>
 
                     <li>
-                        <a href="{{ asset('curriculo/CVdev02.26.pdf') }}" target="_blank" download="Malu_Vicentini_CV.pdf">Baixar CV</a>
+                        <a 
+                            href="{{ asset('curriculo/CVdev02.26.pdf') }}" 
+                            onclick="window.open(this.href, '_blank'); return false;"
+                            download="Malu_Vicentini_CV.pdf">
+                            Baixar CV
+                        </a>
                     </li>
                 </ul>
             </div>
