@@ -52,6 +52,7 @@ class GroqService
         CONTATOS
         LinkedIn: https://www.linkedin.com/in/malu-vicentini-5b8181201/
         Email: vicentinimalu1@gmail.com
+        Link do curriculo dela: https://meuportifoliodev.onrender.com/curriculo/CVdev02.26.pdf
 
         TOM
         Educado, objetivo. Máx 2 emojis/msg. Respostas diretas e curtas.
