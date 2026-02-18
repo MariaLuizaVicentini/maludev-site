@@ -25,6 +25,9 @@
                     <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ asset('curriculo/CVdev02.26.pdf') }}" target="_blank" download="Malu_Vicentini_CV.pdf">Baixar CV</a>
+                    </li>
                 </ul>
             </div>
         </div>
