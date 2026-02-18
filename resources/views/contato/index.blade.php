@@ -96,6 +96,10 @@
                                 Sobre
                             </a>
                         </li>
+
+                        <li>
+                            <a href="{{ asset('curriculo/CVdev02.26.pdf') }}" target="_blank" download="Malu_Vicentini_CV.pdf">Baixar CV</a>
+                        </li>
                     </ul>
                 </div>
 
