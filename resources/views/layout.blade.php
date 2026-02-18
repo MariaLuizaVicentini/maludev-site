@@ -25,6 +25,8 @@
 
     @yield('meu-contato')
 
+    @yield('footer')
+
     @yield('chat')
 
 </body>

@@ -24,6 +24,10 @@
     @include('contato.index')
 @endsection
 
+@section('footer') 
+    @include('footer.index')
+@endsection
+
 @section('chat') 
     @include('chat.index')
 @endsection
