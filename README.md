@@ -65,7 +65,7 @@ Acesse em: http://127.0.0.1:8000
 
 [✅] Caminho do DB_DATABASE conferido.
 
-[ ] APP_KEY gerada com sucesso.
+[✅] APP_KEY gerada com sucesso.
 
-[ ] PHP 7.4+ instalado e configurado no PATH.
+[✅] PHP 7.4+ instalado e configurado no PATH.
 
