@@ -1,7 +1,11 @@
 @extends('layout')
 
+@section('navbar') 
+    @include('navbar.index')
+@endsection
+
 @section('pagina-inicial') 
-    @include('inicio.index')
+    @include('pagina-inicial.index')
 @endsection
 
 @section('meus-projetos') 
