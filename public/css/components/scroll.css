@@ -1,0 +1,103 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+}
+
+
+
+
+/* Scroll reveal — add .reveal class via JS if desired */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+
+/* ─── Responsive Tweaks ──────────────────────── */
+@media (max-width: 991.98px) {
+  #inicio::after {
+    display: none;
+  }
+
+  #inicio .col-lg-5>div {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(10, 10, 10, 0.97);
+    border-top: 1px solid var(--border);
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+}
+
+
+/* ─── Utility ────────────────────────────────── */
+.text-green {
+  color: var(--green) !important;
+}
+
+.bg-green {
+  background-color: var(--green) !important;
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  #chat-box {
+    width: 260px;
+    height: 360px;
+    bottom: 70px;
+    right: 10px;
+  }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 480px) {
+  #chat-box {
+    width: 90%;
+    height: 60vh;
+    right: 5%;
+    bottom: 70px;
+  }
+}
+
+
+/* AREA MENSAGENS */
+#chat-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+@media (min-width: 1200px) {
+  #chat-box {
+    width: 300px;
+    height: 60vh;
+  }
+}
+

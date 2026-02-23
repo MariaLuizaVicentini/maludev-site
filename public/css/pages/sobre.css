@@ -1,0 +1,28 @@
+
+/* ─── sobre mim ──────────────────────────── */
+#sobre {
+  background-color: var(--bg-main);
+  position: relative;
+}
+
+#sobre::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, var(--green), transparent);
+}
+
+#sobre p {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-secondary) !important;
+  line-height: 1.85;
+}
+
+#sobre p+p {
+  margin-top: 1.2rem;
+}

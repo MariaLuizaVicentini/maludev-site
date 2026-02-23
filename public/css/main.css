@@ -1,0 +1,18 @@
+/* base */
+@import url('./base/reset.css');
+@import url('./base/base.css');
+
+/* components */
+@import url('./components/scroll.css');
+
+/*layout*/
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+@import url('./layout/chat.css');
+
+
+/* paginas */
+@import url('./pages/contato.css');
+@import url('./pages/habilidades.css');
+@import url('./pages/projects.css');
+@import url('./pages/sobre.css');

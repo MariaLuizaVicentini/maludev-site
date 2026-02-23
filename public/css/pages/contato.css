@@ -1,0 +1,69 @@
+/* ─── Contact Section ────────────────────────── */
+#contato {
+  background-color: var(--bg-section);
+}
+
+#contato h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Form inputs */
+#contato .form-control {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background-color: #111 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+  padding: 1rem 1.2rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+#contato .form-control::placeholder {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+#contato .form-control:focus {
+  background-color: #131313 !important;
+  border-color: rgba(0, 230, 118, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.08), 0 0 15px rgba(0, 230, 118, 0.05) !important;
+  outline: none;
+}
+
+/* Submit button */
+#contato .btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background-color: var(--green) !important;
+  color: #0a0a0a !important;
+  border-radius: 2px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+#contato .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#contato .btn:hover::before {
+  transform: translateX(0);
+}
+
+#contato .btn:hover {
+  box-shadow: 0 0 25px var(--green-glow);
+  transform: translateY(-1px);
+}

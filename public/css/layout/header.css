@@ -1,0 +1,209 @@
+/* ─── Navbar ─────────────────────────────────── */
+.navbar {
+  background-color: rgba(10, 10, 10, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--green) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity var(--transition);
+}
+
+.navbar-brand:hover {
+  opacity: 0.75;
+}
+
+
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary) !important;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  transition: color var(--transition);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 1.5px;
+  background: var(--green);
+  transition: transform var(--transition);
+  transform-origin: center;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--green) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ─── Hero Section ───────────────────────────── */
+#inicio {
+  position: relative;
+  background-color: var(--bg-main);
+  overflow: hidden;
+}
+
+/* fundo quadriculado - Pagina inicial */
+#inicio::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.08) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.08) 2px, transparent 2px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+#inicio h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  animation: fadeSlideUp 0.8s ease both;
+}
+
+#inicio h1 span {
+  color: var(--green);
+  text-shadow: 0 0 30px var(--green-glow);
+}
+
+#inicio .lead {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  animation: fadeSlideUp 0.8s 0.15s ease both;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hero CTA button */
+#inicio .btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  background-color: var(--green);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  animation: fadeSlideUp 0.8s 0.3s ease both;
+}
+
+#inicio .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#inicio .btn:hover::before {
+  transform: translateX(0);
+}
+
+#inicio .btn:hover {
+  box-shadow: 0 0 25px var(--green-glow), 0 0 60px rgba(0, 230, 118, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Profile circle */
+#inicio .col-lg-5>div {
+  animation: fadeScale 1s 0.4s ease both;
+  position: relative;
+}
+
+#inicio .col-lg-5>div::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 230, 118, 0.2);
+  animation: spinSlow 20s linear infinite;
+}
+
+#inicio .col-lg-5>div::after {
+  content: '';
+  position: absolute;
+  inset: -25px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 230, 118, 0.08);
+  animation: spinSlow 35s linear infinite reverse;
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ─── Section Shared ─────────────────────────── */
+.section-dark {
+  background-color: var(--bg-section);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.divider-green {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), transparent);
+  margin-bottom: 3rem;
+}
+
+
+/* Shared section heading style (inline) */
+h2.fw-bold.text-white {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: -0.02em;
+}

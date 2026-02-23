@@ -1,0 +1,63 @@
+
+/* ─── Footer ─────────────────────────────────── */
+footer {
+  background-color: var(--bg-main) !important;
+  border-top: 1px solid var(--border);
+}
+
+footer h5 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+footer p.text-secondary,
+footer .text-secondary {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted) !important;
+  line-height: 1.6;
+}
+
+/* Footer links */
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition), padding-left var(--transition);
+  display: inline-block;
+}
+
+footer ul li a:hover {
+  color: var(--green);
+  padding-left: 4px;
+}
+
+/* Footer social icons */
+footer .fab {
+  color: var(--text-secondary);
+  transition: color var(--transition), transform var(--transition), filter var(--transition);
+}
+
+footer a:hover .fab {
+  color: var(--green);
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 6px var(--green));
+}
+
+footer hr {
+  border-color: var(--border);
+  margin: 1rem 0;
+}
+
+footer p.text-secondary.mb-0 {
+  font-size: 0.78rem;
+}

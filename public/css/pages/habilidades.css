@@ -1,0 +1,72 @@
+
+/* ─── Skills Section ─────────────────────────── */
+#habilidades {
+  background-color: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card {
+  background-color: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(0, 230, 118, 0.25);
+  background-color: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 230, 118, 0.05);
+}
+
+.skill-card:hover::after {
+  transform: scaleX(1);
+}
+
+.skill-icon {
+  font-size: 2.2rem;
+  display: block;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(-5deg);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.skill-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  margin-top: 0.5rem !important;
+}
+
+.skill-card:hover .skill-title {
+  color: var(--green);
+}
+
+/* Override Bootstrap color for purple */
+.text-purple {
+  color: #7c4dff !important;
+}
