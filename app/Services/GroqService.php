@@ -23,8 +23,8 @@ REGRAS CRÍTICAS
 
 PERFIL DA MALU
 - 22 anos, Gestão de TI (PUC Campinas)
-- QA: testa funcionalidades e desenvolve APIs
-- Foco: back-end tem experiência em suporte técnico
+- Desenvolvedora back-end focada atualmente na construcao e manutencao de APIs
+- Experiencia: tem experiência em suporte técnico, QA e agora Dev junior
 - Estuda programação desde 2024
 - Perfil: autônoma, analítica, colaborativa
 
