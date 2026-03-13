@@ -9,7 +9,7 @@
                         Olá, eu sou a <span style="color: #00e676;">Malu!</span>
                     </h1>
                     <p class="lead mb-4" style="color: #999; font-size: 1.2rem;">
-                        Sou QA atualmente, mas futura desenvolvedora Back-end.
+                        Desenvolvedora Back-end.
                     </p>
                     <a href="#projetos" class="btn btn-lg px-4 py-2 fw-semibold"
                         style="background-color: #00e676; color: #0a0a0a; border: none; border-radius: 4px;">
