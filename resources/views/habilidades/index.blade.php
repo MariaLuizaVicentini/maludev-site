@@ -13,11 +13,11 @@
                 ['icon' => 'fa-html5', 'name' => 'HTML5', 'color' => 'text-danger'],
                 ['icon' => 'fa-css3-alt', 'name' => 'CSS3', 'color' => 'text-primary'],
                 ['icon' => 'fa-js', 'name' => 'JavaScript', 'color' => 'text-warning'],
-                ['icon' => 'fa-bootstrap', 'name' => 'Bootstrap', 'color' => 'text-purple'], // Sugestão: roxo
+                ['icon' => 'fa-bootstrap', 'name' => 'Bootstrap', 'color' => 'text-purple'],
                 ['icon' => 'fa-php', 'name' => 'PHP', 'color' => 'text-info'],
-                ['icon' => 'fa-database', 'name' => 'SQLite', 'color' => 'text-secondary'],
+                ['icon' => 'fa-database', 'name' => 'SQLite', 'color' => 'text-info'],
                 ['icon' => 'fa-laravel', 'name' => 'Laravel', 'color' => 'text-danger'],
-                ['icon' => 'fa-git-alt', 'name' => 'Git', 'color' => 'text-dark'],
+                ['icon' => 'fa-git-alt', 'name' => 'Git', 'color' => 'text-danger'],
                 ['icon' => 'fa-python', 'name' => 'Python', 'color' => 'text-primary'],
             ];
             @endphp
