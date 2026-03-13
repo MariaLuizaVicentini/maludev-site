@@ -18,7 +18,7 @@
                             <p style="color: #777; font-size: 0.9rem;">Sistema Full-Stack em PHP com Laravel e Bootstrap.
                                 Autenticação, gestão de catálogo e controle de episódios assistidos.</p>
                             <a href="https://github.com/MariaLuizaVicentini/controle-series" class="text-decoration-none fw-semibold"
-                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                style="color: #00e676; font-size: 0.9rem;">Visualizar repositório <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             <p style="color: #777; font-size: 0.9rem;">API de Scraping para busca automatizada de vagas com
                                 filtros avançados de relevância e segmentação por período.</p>
                             <a href="https://github.com/MariaLuizaVicentini/BuscaVagasLinkedin" class="text-decoration-none fw-semibold"
-                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                style="color: #00e676; font-size: 0.9rem;">Visualizar repositório <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -49,9 +49,9 @@
                                 <i class="bi bi-briefcase" style="color: #00e676; font-size: 1.2rem;"></i>
                             </div>
                             <h5 class="card-title text-white fw-bold">Portfólio Dev</h5>
-                            <p style="color: #777; font-size: 0.9rem;">Desenvolvido em Laravel com Bootstrap e PHP.</p>
+                            <p style="color: #777; font-size: 0.9rem;">Aplicação web desenvolvida em Laravel para apresentação de projetos, habilidades técnicas e repositórios de desenvolvimento.</p>
                             <a href="https://github.com/MariaLuizaVicentini/MeuPortifolioDev" class="text-decoration-none fw-semibold"
-                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                style="color: #00e676; font-size: 0.9rem;">Visualizar repositório <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -65,10 +65,9 @@
                                 <i class="bi bi-currency-dollar" style="color: #00e676; font-size: 1.2rem;"></i>
                             </div>
                             <h5 class="card-title text-white fw-bold">Cotação Banco Central</h5>
-                            <p style="color: #777; font-size: 0.9rem;">Aplicação em PHP que consome a API do Banco Central
-                                para cotação do dólar e conversão de valores em tempo real.</p>
+                            <p style="color: #777; font-size: 0.9rem;">Aplicação em PHP que consome a API do Banco Central para consultar a cotação do dólar e realizar conversões em tempo real.</p>
                             <a href="https://github.com/MariaLuizaVicentini/CotacaoBancoCentral" class="text-decoration-none fw-semibold"
-                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                style="color: #00e676; font-size: 0.9rem;">Visualizar repositório <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -82,10 +81,9 @@
                                 <i class="bi bi-scissors" style="color: #00e676; font-size: 1.2rem;"></i>
                             </div>
                             <h5 class="card-title text-white fw-bold">Barbearia Alura</h5>
-                            <p style="color: #777; font-size: 0.9rem;">Projeto responsivo adaptado para diferentes tamanhos
-                                de tela, com experiência agradável em desktop e mobile.</p>
+                            <p style="color: #777; font-size: 0.9rem;">Projeto responsivo de landing page desenvolvido com HTML e CSS, adaptado para diferentes dispositivos e tamanhos de tela.</p>
                             <a href="https://github.com/MariaLuizaVicentini/barbeariaAlura" class="text-decoration-none fw-semibold"
-                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                style="color: #00e676; font-size: 0.9rem;">Visualizar repositório <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -99,10 +97,9 @@
                                 <i class="bi bi-robot" style="color: #00e676; font-size: 1.2rem;"></i>
                             </div>
                             <h5 class="card-title text-white fw-bold">Automação Web Login</h5>
-                            <p style="color: #777; font-size: 0.9rem;">Script em Python para automação web utilizando
-                                Selenium.</p>
+                            <p style="color: #777; font-size: 0.9rem;">Script em Python utilizando Selenium para automatizar login em aplicações web e executar interações repetitivas no navegador.</p>
                             <a href="https://github.com/MariaLuizaVicentini/AutomacaoWeb-Python" class="text-decoration-none fw-semibold"
-                                style="color: #00e676; font-size: 0.9rem;">Ver Detalhes <i
+                                style="color: #00e676; font-size: 0.9rem;">Visualizar repositório <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
