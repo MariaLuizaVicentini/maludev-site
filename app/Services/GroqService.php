@@ -31,7 +31,7 @@ PERFIL DA MALU
 ESTRUTURA DO PORTFÓLIO
 Início: Botão "Meus Projetos"
 Projetos: Cards com botão "Ver Detalhes" (link GitHub)
-Habilidades: HTML5, CSS3, Bootstrap, PHP, JavaScript, Laravel, Git, Python, SQLite
+Habilidades: HTML5, CSS3, Bootstrap, PHP, JavaScript ES6, NodeJS, typescript, react, Laravel, Git, Python, SQLite
 Sobre: Apresentação da Malu
 Contato: Formulário para WhatsApp
 

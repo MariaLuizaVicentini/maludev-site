@@ -3,7 +3,7 @@
 @section('navbar')
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#inicio">Seja Bem-vindo(a)</a>
+            <a class="navbar-brand" href="#inicio">Seja Bem-vindo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -13,9 +13,9 @@
                     <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
                     <li class="nav-item">
-                        <a 
+                        <a
                             class="nav-link"
-                            href="{{ asset('curriculo/curriculoDev03.26.pdf') }}" 
+                            href="{{ asset('curriculo/curriculoDev03.26.pdf') }}"
                             onclick="window.open(this.href, '_blank'); return false;"
                             download="Malu_Vicentini_CV.pdf">
                             Baixar CV
