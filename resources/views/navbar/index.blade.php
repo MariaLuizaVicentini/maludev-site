@@ -15,7 +15,7 @@
                     <li class="nav-item">
                         <a
                             class="nav-link"
-                            href="{{ asset('curriculo/curriculoDev03.26.pdf') }}"
+                            href="{{ asset('curriculo/DEVMALU_06.206.pdf') }}"
                             onclick="window.open(this.href, '_blank'); return false;"
                             download="Malu_Vicentini_CV.pdf">
                             Baixar CV
